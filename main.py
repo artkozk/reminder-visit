@@ -126,7 +126,8 @@ def Funk(message):
 
 def Funk_check(message):
     if message.text == 'пожертвовать':
-        bot.send_message(message.chat.id, 'Функция "пожертвовать" в разработке.')
+        bot.send_message(message.chat.id, 'Пожертвование можно совершить по этой ссылке:\nhttps://www.tinkoff.ru/cf/6CxmYK1srAU\nСпасибо за ваше открытое сердце!')
+        bot.register_next_step_handler(message, Funk_check)
     elif message.text == 'что читать сегодня?':
         Read(message.chat.id)
     elif message.text == "Statistik1":
